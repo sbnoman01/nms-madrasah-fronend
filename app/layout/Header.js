@@ -46,10 +46,16 @@ export default function Header() {
               </div>
               <ul className='me-5'>
                 <li className={currentRoute === '/' ? 'envoy-menu-active' : ''}>
-                  <Link href="/">Home</Link>
+                  <Link href="/">হোম</Link>
                 </li>
                 <li className={currentRoute === '/themes' ? 'envoy-menu-active' : ''}>
-                  <Link href="/themes" onClick={hamburgerHangle}>Themes</Link>
+                  <Link href="/themes" onClick={hamburgerHangle}>পরিচিতি</Link>
+                  <i class="fl flaticon-plus">+</i>
+                  
+                    <ul class="sub-menu">
+                    <li class="envoy-menu-active"><a href="/principal-message">অধ্যক্ষের বাণী</a></li>
+                      <li class="envoy-menu-active"><a href="#">উপাধ্যক্ষের বাণী</a></li>
+                    </ul>
                 </li>
                 <li className={currentRoute === '/services' ? 'envoy-menu-active' : ''}>
                   <Link href="/services" onClick={hamburgerHangle}>Services</Link>
@@ -62,10 +68,7 @@ export default function Header() {
                 </li>
               </ul>
               <div className="btn-wrap flex-shrink-0">
-                <Link href="#" className='btn__style_1_outline me-2' onClick={hamburgerHangle}>Documentation</Link>
-                <Link href="https://support.wprealizer.com/" target='_blank
-                            
-                            ' className='btn__style_1' onClick={hamburgerHangle}>Support</Link>
+                <Link href="#" className='btn__style_1_outline me-2' onClick={hamburgerHangle}>নোটিশ</Link>
               </div>
             </nav>
           </Col>

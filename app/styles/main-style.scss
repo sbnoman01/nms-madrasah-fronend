@@ -16,7 +16,8 @@ a{
 }
 ul{
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -57,6 +58,10 @@ h5{
     display: flex;
     height: 100%;
     align-items: center;
+}
+header.site_header {
+    padding: 20px 0;
+    background: $pri_color;
 }
 
 .hamburger {
@@ -297,44 +302,7 @@ h5{
                 }
             }
         }
-    }
-
-    &.bg-blue {
-        .sub-menu {
-            background: blue;
-
-            &::before {
-                background-color: blue;
-            }
-
-            >li {
-                a {
-                    &::before {
-                        // background-image: url(../images/shape/menu-2.svg);
-                    }
-                }
-
-                &.envoy-menu-active {
-                    a {
-                        &::before {
-                            // background-image: url(../images/shape/menu-2.svg);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.bg-black {
-        .sub-menu {
-            background: blue;
-            min-width: 255px;
-
-            &::before {
-                background-color: blue;
-            }
-        }
-    }
+    }    
 }
 
 .main-nav ul li .sub-menu li .sub-menu {
@@ -342,8 +310,6 @@ h5{
     left: inherit;
     top: 0;
 }
-
-
 
 .main-nav .fl {
     width: 30px;
@@ -613,6 +579,13 @@ h5{
     }
 }
 
+// Breadcrumb
+.nms_breadcrumb{
+    background-image: url('/assets/img/bg.webp');
+    background-position: center center;
+    padding: 150px 0;
+    border-bottom: 5px solid gray;
+}
 
 // hero area
 .hero_bg{
@@ -669,6 +642,11 @@ h5{
                     }
                 }
             }
+            ._ni_content{
+                a{
+                    color: $sec_color;
+                }
+            }
             
         }
     }
@@ -676,7 +654,7 @@ h5{
 .featur_people{
     padding: 20px;
     border: 1px solid $border_color;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     
     .__label{
         background-color: $pri_color;
@@ -689,5 +667,56 @@ h5{
     }
     p{
         margin-bottom: 0;
+    }
+}
+
+// links box
+.nms_links_bx{
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 20px;
+    position: relative;
+    box-shadow: 1px 1px 1px 1px #ccc;
+
+    h4{
+        margin-bottom: 15px;
+    }
+    .__content{
+        display: flex;
+        align-items: center;
+       padding-left: 15px;
+
+       ul li {
+            margin: 2px 0 0 20px;
+            font-size: 1.2em;
+            list-style-image: url("https://www.rpir.gov.bd/themes/responsive_npf/images/bullet_arrow.png");
+
+            a {
+                display: block;
+                color: $sec_color;
+                transition: .3s all ease;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+       }
+    }
+}
+
+.message_body{
+    h2{
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 20px;
+        line-height: 1.8;
+    }
+}
+
+
+// footer
+.footer-artwork{
+    img{
+        width: 100%;
     }
 }
